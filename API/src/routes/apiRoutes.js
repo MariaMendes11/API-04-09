@@ -1,14 +1,14 @@
-//Importal o módulo Router do express 
-//Router será utilizado para definir rotas específicas da aplicação
+// Importa o módulo Router do express
+// Router será  utiliziado para definir rotas específicas da aplicação
 const router = require('express').Router();
 
-//Importa a controller onde contém a lógica relacionada a professores
-const teacherController = require('../controllers/teacherController');
+// Importa a controller onde contém a lógica relacionada a professores
+const controleNumber = require('../controllers/NumberController');
 
-//Rota POST para '/tecaher'
-router.post('/teacher/',teacherController.postTeacher);
-router.get('/teacher/',teacherController.getTeacher);
 
+// Rota POST para '/teacher'
+router.post('/NumeroPar/',controleNumber.postPar);
+router.post('/NumeroPrimo/',controleNumber.postPrimo);
+router.get('/teacher/', controleNumber.getNumbers);
 
 module.exports = router
-
